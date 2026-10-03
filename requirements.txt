@@ -1,0 +1,24 @@
+# REF-Path: packages imported by the code in this repository.
+# Python >= 3.12 is required (the scripts use nested f-string quotes, PEP 701).
+# The lower bounds are the versions of the environment in which the results were produced (Python 3.12,
+# CUDA build of torch); older releases are untested. Install the torch build that matches your CUDA driver first,
+# see https://pytorch.org. Training scripts need one CUDA GPU; scripts/verify_results.py needs only numpy and matplotlib.
+
+numpy>=2.4
+scipy>=1.18
+scikit-learn>=1.9
+matplotlib>=3.10
+torch>=2.13
+soundfile>=0.14            # DCASE 2026 wav files (refpath/data/dcase.py), optional MSU corpus
+pandas>=2.3                # scripts/mixed_effects.py
+statsmodels>=0.15          # scripts/mixed_effects.py
+dasheng==0.0.9             # second audio foundation model (scripts/train_dasheng.py); downloads its checkpoint on first use
+torchaudio>=2.11           # required by dasheng (its mel front end); BEATs itself uses refpath/features/torch_frontend.py
+einops>=0.8                # required by dasheng
+
+# Optional, only for Fig. 1 (scripts/make_fig_framework.py; needs Microsoft PowerPoint on Windows):
+# python-pptx>=1.0
+# pywin32>=306
+
+# Not a Python package: the `unzip` command must be on the PATH (the Guilin .bkc containers are streamed from the zip archives).
+# LoRA is implemented in refpath/models/path_lora.py; peft, transformers, timm and h5py are not needed.

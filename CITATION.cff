@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this code or the Reference-Only benchmark protocols, please cite the paper below."
+title: "REF-Path: Healthy-Reference Standardization for Acoustic Fault Diagnosis across Sensing Paths and Speeds (code)"
+type: software
+authors:
+  - name: "Author names to be added"
+license: MIT
+preferred-citation:
+  type: article
+  title: "REF-Path: Healthy-Reference Standardization for Acoustic Fault Diagnosis across Sensing Paths and Speeds"
+  authors:
+    - name: "Author names to be added"
+  journal: "Journal of Sound and Vibration"
+  year: 2026
+  status: submitted
+  notes: "Under review"
